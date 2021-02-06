@@ -54,7 +54,9 @@ sudo puppet apply /home/vagrant/shared/service_mysql_start.pp
 sudo puppet apply /home/vagrant/shared/service_mysql_stop.pp
 ```
 
-[![Watch the video](https://www.3pixls.com/blog/wp-content/uploads/2016/04/youtubethumb.png)](https://user-images.githubusercontent.com/14912971/107131223-d02e9000-68d4-11eb-9c6a-78e425ae587f.mp4
+[![Watch the video](https://www.3pixls.com/blog/wp-content/uploads/2016/04/youtubethumb.png)](https://user-images.githubusercontent.com/14912971/107131223-d02e9000-68d4-11eb-9c6a-78e425ae587f.mp4)
+
+
 
 ##### Useful commands
 A complete listo of package installed: `sudo puppet resource package`
