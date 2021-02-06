@@ -59,5 +59,6 @@ sudo puppet apply /home/vagrant/shared/service_mysql_stop.pp
 
 
 ##### Useful commands
-A complete listo of package installed: `sudo puppet resource package`
-List of all installable packages: `sudo apt-cache search .`
+- A complete listo of package installed: `sudo puppet resource package`
+
+- List of all installable packages: `sudo apt-cache search .`
