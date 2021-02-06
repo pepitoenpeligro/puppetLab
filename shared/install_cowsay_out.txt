@@ -1,0 +1,13 @@
+package { 'cowsay':
+  ensure   => '3.03+dfsg2-4',
+  mark     => 'none',
+  provider => 'apt',
+}
+ __________
+< hi! Pepe >
+ ----------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
