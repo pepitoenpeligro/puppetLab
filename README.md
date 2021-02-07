@@ -76,3 +76,31 @@ $(from host->guest) whoami
 - A complete listo of package installed: `sudo puppet resource package`
 
 - List of all installable packages: `sudo apt-cache search .`
+
+- List of all facts (OS properties): `puppet facts`
+
+- List all os properties: `facter os`
+  - ```bash
+      { architecture => "amd64",
+      distro => {
+        codename => "bionic",
+        description => "Ubuntu 18.04.5 LTS",
+        id => "Ubuntu",
+        release => {
+          full => "18.04",
+          major => "18.04"
+        }
+      },
+      family => "Debian",
+      hardware => "x86_64",
+      name => "Ubuntu",
+      release => {
+        full => "18.04",
+        major => "18.04"
+      },
+      selinux => {
+        enabled => false
+      }
+    }
+    ```
+  - Create a new facter `/opt/puppetlabs/facter/facts.d/myfactername.sh` && `chmod a+x /opt/puppetlabs/facter/facts.d/myfactername.sh` && now you can execute `sudo facter myfactername`

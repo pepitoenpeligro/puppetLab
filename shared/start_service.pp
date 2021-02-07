@@ -1,6 +1,6 @@
 service{
   'sshd':
-  ensure => running
+  ensure => running,
   enable => true
 }
 
