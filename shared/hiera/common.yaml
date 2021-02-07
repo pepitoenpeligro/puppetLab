@@ -26,3 +26,5 @@ users:
     password: 'LGbE2O07LpUJc'
     managehome: true
 
+mysql::server::root_password: 'root'
+mysql::server::remove_default_accounts: true
