@@ -1,0 +1,35 @@
+name: Check Puppet Manifests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install Puppet agent
+        run: |
+          echo "Installing puppet agent..."
+          sudo apt-get install puppet-agent -y 
+            
+      - name: Get all puppet manifests
+        run: |
+          files=($(find shared/ -type f -name "*.pp"))
+          echo "All manifests I detected:"
+          for item in ${files[*]}; do echo $item; done
+          
+      - name: Check all puppet manifests
+        run: | 
+          echo "Validating all puppet manifests..."
+          for item in ${files[*]}; do puppet parser validate $item; done
+          
