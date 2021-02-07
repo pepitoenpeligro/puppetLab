@@ -1,0 +1,28 @@
+---
+is_auto_discovered: true
+ips: 
+  - '1.1.1.1'
+  - '2.2.2.2'
+  - '3.3.3.3'
+install_path: '/usr/local/bin'
+nodes_number: 5
+
+path: "%{facts.path}"
+
+
+users:
+  'pepe':
+    ensure: present
+    uid: 1900
+    shell: '/bin/bash'
+    home: '/home/pepe'
+    password: '2u1GqxP1aohA6'
+    managehome: true
+  'cristina':
+    ensure: present
+    uid: 1901
+    shell: '/bin/bash'
+    home: '/home/cristina'
+    password: 'LGbE2O07LpUJc'
+    managehome: true
+
