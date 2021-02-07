@@ -20,6 +20,9 @@ jobs:
       - name: Install Puppet agent
         run: |
           echo "Installing puppet agent..."
+          wget https://apt.puppetlabs.com/puppet5-release-bionic.deb
+          sudo dpkg -i puppet5-release-bionic.deb
+          sudo apt update
           sudo apt-get install puppet-agent -y 
             
       - name: Get all puppet manifests
