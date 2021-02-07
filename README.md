@@ -57,6 +57,20 @@ sudo puppet apply /home/vagrant/shared/service_mysql_stop.pp
 [![Watch the video](https://www.3pixls.com/blog/wp-content/uploads/2016/04/youtubethumb.png)](https://user-images.githubusercontent.com/14912971/107131223-d02e9000-68d4-11eb-9c6a-78e425ae587f.mp4)
 
 
+## Create not sudo user with ssh key and connect with ssh
+```bash
+sudo puppet apply shared/user_group_create.pp
+cat /etc/passwd | grep pepitoenpeligro
+$(from host) ssh -i "~/.ssh/puppetLab" pepitoenpeligro@127.0.0.1 -p 2222
+$(from host->guest) whoami
+```
+
+[![Watch the video](https://www.3pixls.com/blog/wp-content/uploads/2016/04/youtubethumb.png)](https://user-images.githubusercontent.com/14912971/107145201-5cc26800-6940-11eb-9fc5-4b07b1589ada.mov)
+
+
+
+
+
 
 ##### Useful commands
 - A complete listo of package installed: `sudo puppet resource package`
